@@ -1,0 +1,338 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2024-07-19T17:25:41.294Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Урок 1. Алфавит и звуки",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2024-07-19T17:25:57.722Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Урок 1. Алфавит и звуки",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2024-07-19T17:28:09.447Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Урок 1. Алфавит и звуки",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435 \\u0443\\u0440\\u043e\\u043a\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2024-07-19T17:29:33.040Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Урок 2. Порядок слов в предложении",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2024-07-19T17:31:51.663Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Профессия графический дизайнер",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2024-07-19T17:33:36.312Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Урок 1. Основы дизайна",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2024-07-19T17:34:24.586Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Урок 2. Photoshop",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2024-07-19T17:55:26.239Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Профессия графический дизайнер",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2024-07-19T18:01:06.038Z",
+    "user": 2,
+    "content_type": 6,
+    "object_id": "3",
+    "object_repr": "test@test.ru",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2024-07-19T18:02:01.634Z",
+    "user": 2,
+    "content_type": 6,
+    "object_id": "4",
+    "object_repr": "test1@test.ru",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2024-07-19T18:02:15.107Z",
+    "user": 2,
+    "content_type": 6,
+    "object_id": "3",
+    "object_repr": "test@test.ru",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0413\\u043e\\u0440\\u043e\\u0434\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2024-07-19T18:20:49.691Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "test1@test.ru - 5000",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2024-07-19T18:21:31.081Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "test@test.ru - 1000",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2024-07-19T18:21:44.084Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "test@test.ru - 1000",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043f\\u043e\\u0441\\u043e\\u0431 \\u043e\\u043f\\u043b\\u0430\\u0442\\u044b\"]}}]"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "enphsbjjpnwq786cv7eqi4026iylkggo",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCGQgGX7j0DmQ6DVA0kpV0Z765NutDtf-_9l4i4rSVunZc4J3EWWpx-twnpwXUH6Y711iS1ui7zJHdFHrTLa0v8vBzu30HBXr61sYzMjIiZCEY3srFDSN6bwXgdrAJiHAAUpOxC9lmBty6HAIiaQhbvD_qyOBI:1sUrIK:LogLXf4g-dW5gMlg6xODy0E9Kv6Kzkzps6JVI97-aII",
+    "expire_date": "2024-08-02T17:21:24.931Z"
+  }
+},
+{
+  "model": "users.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$HGqjejUI9tKvUpFe3fTkuv$tiU/w1pxRN5z/itJmeM9z6/Wi+PTcPBlhQOfqQOGtKw=",
+    "last_login": "2024-07-19T17:21:24.930Z",
+    "is_superuser": true,
+    "first_name": "Admin",
+    "last_name": "Admin",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-07-19T17:20:47.663Z",
+    "email": "admin1@admin.com",
+    "phone": null,
+    "city": null,
+    "avatar": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 3,
+  "fields": {
+    "password": "1234",
+    "last_login": "2024-07-19T18:00:47Z",
+    "is_superuser": false,
+    "first_name": "Иван",
+    "last_name": "Иванов",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-07-19T18:00:40Z",
+    "email": "test@test.ru",
+    "phone": null,
+    "city": "Москва",
+    "avatar": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 4,
+  "fields": {
+    "password": "09876",
+    "last_login": "2024-07-19T18:01:17Z",
+    "is_superuser": false,
+    "first_name": "Петр",
+    "last_name": "Петров",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-07-19T18:01:10Z",
+    "email": "test1@test.ru",
+    "phone": null,
+    "city": "Санкт-Петербург",
+    "avatar": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.payments",
+  "pk": 4,
+  "fields": {
+    "user": 4,
+    "payment_date": "2024-07-19",
+    "paid_course": 2,
+    "paid_lesson": null,
+    "amount_payment": 5000,
+    "payment_method": "transfer"
+  }
+},
+{
+  "model": "users.payments",
+  "pk": 5,
+  "fields": {
+    "user": 3,
+    "payment_date": "2024-07-19",
+    "paid_course": null,
+    "paid_lesson": 3,
+    "amount_payment": 1000,
+    "payment_method": "cash"
+  }
+},
+{
+  "model": "materials.course",
+  "pk": 2,
+  "fields": {
+    "name": "English Онлайн",
+    "preview": "",
+    "description": "Уроки английского языка с преподавателем"
+  }
+},
+{
+  "model": "materials.course",
+  "pk": 4,
+  "fields": {
+    "name": "Профессия графический дизайнер",
+    "preview": "",
+    "description": "Графический дизайнер — универсальный специалист. Он умеет создавать любой визуальный контент: от печатной продукции до макета сайта. На курсе вы станете дизайнером, близким к уровню middle и способным решить актуальные задачи рынка"
+  }
+},
+{
+  "model": "materials.lesson",
+  "pk": 1,
+  "fields": {
+    "course": 2,
+    "name": "Урок 1. Алфавит и звуки",
+    "description": "Почему важно знать английский алфавит?\r\nОн помогает быстрее научиться читать на английском и освоить фонетику;\r\nЛегче будет искать слова в словарях;\r\nЧасто просят произнести мейл / имя / улицу по буквам",
+    "preview": "",
+    "link_video": null
+  }
+},
+{
+  "model": "materials.lesson",
+  "pk": 2,
+  "fields": {
+    "course": 2,
+    "name": "Урок 2. Порядок слов в предложении",
+    "description": "В отличие от русского языка, в английском языке у слов нет окончаний, которые могли бы помочь понять роль каждого члена предложения. Поэтому правила построения предложений в английском языке довольно строгие.",
+    "preview": "",
+    "link_video": null
+  }
+},
+{
+  "model": "materials.lesson",
+  "pk": 3,
+  "fields": {
+    "course": 4,
+    "name": "Урок 1. Основы дизайна",
+    "description": "Композиция, типографика, модельные сетки и адаптивность. Вы изучите базу и научитесь использовать ее в графических инструментах.",
+    "preview": "",
+    "link_video": null
+  }
+},
+{
+  "model": "materials.lesson",
+  "pk": 4,
+  "fields": {
+    "course": 4,
+    "name": "Урок 2. Photoshop",
+    "description": "Освоите базу и научитесь создавать графику от баннеров для соцсетей до коллажей и постеров",
+    "preview": "",
+    "link_video": null
+  }
+}
+]
