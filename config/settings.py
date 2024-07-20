@@ -18,7 +18,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-
+    "django_dump_load_utf8",
+    "django_filters",
     "rest_framework",
     "users",
     "materials",
@@ -61,7 +62,7 @@ DATABASES = {
         "USER": "postgres",
         "PASSWORD": "123456",
         "HOST": "localhost",
-        "PORT": "5432"
+        "PORT": "5432",
     }
 }
 
@@ -96,3 +97,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = "users.User"
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',)
+}
