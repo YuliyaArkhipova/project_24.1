@@ -3,6 +3,7 @@ from datetime import date
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
+
 from materials.models import Course, Lesson
 
 NULLABLE = {"blank": True, "null": True}
@@ -20,7 +21,7 @@ class User(AbstractUser):
         max_length=35,
         verbose_name="Телефон",
         help_text="Введите номер телефона",
-        **NULLABLE
+        **NULLABLE,
     )
     city = models.CharField(
         max_length=50, verbose_name="Город", help_text="Укажите город", **NULLABLE
@@ -29,7 +30,7 @@ class User(AbstractUser):
         upload_to="users/avatars/",
         verbose_name="Аватар",
         help_text="Добавьте аватар",
-        **NULLABLE
+        **NULLABLE,
     )
 
     USERNAME_FIELD = "email"
@@ -82,4 +83,4 @@ class Payments(models.Model):
         verbose_name_plural = "Платежи"
 
     def __str__(self):
-        return f'{self.user} - {self.amount_payment}'
+        return f"{self.user} - {self.amount_payment}"

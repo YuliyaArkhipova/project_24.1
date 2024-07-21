@@ -31,9 +31,8 @@ class CourseDetailSerializer(ModelSerializer):
 
 
 class LessonSerializer(ModelSerializer):
-    course = CourseSerializer()
+    course = CourseSerializer(read_only=True)
 
     class Meta:
         model = Lesson
         fields = "__all__"
-
