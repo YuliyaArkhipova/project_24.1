@@ -33,8 +33,7 @@ class Course(models.Model):
 
 class Lesson(models.Model):
     course = models.ForeignKey(
-        Course, on_delete=models.CASCADE, verbose_name="Название курса"
-    )
+        Course, on_delete=models.CASCADE, verbose_name="Название курса", **NULLABLE)
     name = models.CharField(
         max_length=150,
         verbose_name="Название урока",
@@ -67,3 +66,24 @@ class Lesson(models.Model):
 
     def __str__(self):
         return f"{self.name}"
+
+
+class Subscription(models.Model):
+    owner = models.ForeignKey(
+        AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        verbose_name="Пользователь",
+        **NULLABLE)
+
+    course = models.ForeignKey(
+        Course, on_delete=models.CASCADE, verbose_name="Название курса"
+    )
+
+    is_subscribe = models.BooleanField(default=False, verbose_name="Подписка")
+
+    class Meta:
+        verbose_name = "Подписка"
+        verbose_name_plural = "Подписки"
+
+    def __str__(self):
+        return f"{self.owner} - {self.course}"
