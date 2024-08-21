@@ -33,7 +33,8 @@ class Course(models.Model):
 
 class Lesson(models.Model):
     course = models.ForeignKey(
-        Course, on_delete=models.CASCADE, verbose_name="Название курса", **NULLABLE)
+        Course, on_delete=models.CASCADE, verbose_name="Название курса", **NULLABLE
+    )
     name = models.CharField(
         max_length=150,
         verbose_name="Название урока",
@@ -73,7 +74,8 @@ class Subscription(models.Model):
         AUTH_USER_MODEL,
         on_delete=models.CASCADE,
         verbose_name="Пользователь",
-        **NULLABLE)
+        **NULLABLE,
+    )
 
     course = models.ForeignKey(
         Course, on_delete=models.CASCADE, verbose_name="Название курса"

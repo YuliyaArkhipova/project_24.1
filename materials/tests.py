@@ -11,7 +11,9 @@ class LessonTestCase(APITestCase):
     def setUp(self):
         self.user = User.objects.create(email="test3@test.ru")
         self.course = Course.objects.create(name="test_course", description="test")
-        self.lesson = Lesson.objects.create(name="test_lesson", course=self.course, owner=self.user)
+        self.lesson = Lesson.objects.create(
+            name="test_lesson", course=self.course, owner=self.user
+        )
         self.client.force_authenticate(user=self.user)
 
     def test_lesson_retrieve(self):
@@ -23,10 +25,11 @@ class LessonTestCase(APITestCase):
 
     def test_lesson_create(self):
         url = reverse("materials:lesson_create")
-        data = {"name": "test_lesson_create",
-                "course": self.course.pk,
-                "owner": self.user.pk,
-                "description": "test_lesson_create"
+        data = {
+            "name": "test_lesson_create",
+            "course": self.course.pk,
+            "owner": self.user.pk,
+            "description": "test_lesson_create",
         }
         response = self.client.post(url, data)
 
@@ -38,7 +41,9 @@ class LessonTestCase(APITestCase):
         data = {"name": "test_lesson_update"}
         response = self.client.put(url, data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(Lesson.objects.get(pk=self.lesson.pk).name, "test_lesson_update")
+        self.assertEqual(
+            Lesson.objects.get(pk=self.lesson.pk).name, "test_lesson_update"
+        )
 
     def test_lesson_delete(self):
         url = reverse("materials:lesson_delete", args=(self.lesson.pk,))

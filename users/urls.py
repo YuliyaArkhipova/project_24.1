@@ -5,7 +5,7 @@ from users.apps import UsersConfig
 
 from django.urls import path
 
-from users.views import UserCreateAPIView, PaymentsListAPIView
+from users.views import UserCreateAPIView, PaymentsListAPIView, PaymentCreateAPIView
 
 app_name = UsersConfig.name
 
@@ -22,4 +22,5 @@ urlpatterns = [
         TokenRefreshView.as_view(permission_classes=(AllowAny,)),
         name="token_refresh",
     ),
+    path("payments/create/", PaymentCreateAPIView.as_view(), name="payment_create"),
 ]

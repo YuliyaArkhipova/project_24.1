@@ -18,7 +18,8 @@ from materials.paginators import CustomPagination
 from materials.serializer import (
     CourseSerializer,
     LessonSerializer,
-    CourseDetailSerializer, SubscriptionSerializer,
+    CourseDetailSerializer,
+    SubscriptionSerializer,
 )
 from users.permissions import IsModer, IsOwner
 
@@ -37,7 +38,9 @@ class CourseViewSet(ModelViewSet):
         serializer.save(owner=self.request.user)
 
     def get_permissions(self):
-        if self.action == ["create",]:
+        if self.action == [
+            "create",
+        ]:
             self.permission_classes = (~IsModer,)
         elif self.action in ["update", "retrieve"]:
             self.permission_classes = (IsModer | IsOwner,)
@@ -49,7 +52,10 @@ class CourseViewSet(ModelViewSet):
 class LessonCreateApiView(CreateAPIView):
     queryset = Lesson.objects.all()
     serializer_class = LessonSerializer
-    permission_classes = (~IsModer, IsAuthenticated,)
+    permission_classes = (
+        ~IsModer,
+        IsAuthenticated,
+    )
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
@@ -64,19 +70,28 @@ class LessonListApiView(ListAPIView):
 class LessonRetrieveApiView(RetrieveAPIView):
     queryset = Lesson.objects.all()
     serializer_class = LessonSerializer
-    permission_classes = (IsAuthenticated, IsModer | IsOwner,)
+    permission_classes = (
+        IsAuthenticated,
+        IsModer | IsOwner,
+    )
 
 
 class LessonUpdateApiView(UpdateAPIView):
     queryset = Lesson.objects.all()
     serializer_class = LessonSerializer
-    permission_classes = (IsAuthenticated, IsModer | IsOwner,)
+    permission_classes = (
+        IsAuthenticated,
+        IsModer | IsOwner,
+    )
 
 
 class LessonDestroyApiView(DestroyAPIView):
     queryset = Lesson.objects.all()
     serializer_class = LessonSerializer
-    permission_classes = (IsAuthenticated, IsOwner | ~IsModer,)
+    permission_classes = (
+        IsAuthenticated,
+        IsOwner | ~IsModer,
+    )
 
 
 class SubscriptionAPIView(APIView):
@@ -88,11 +103,13 @@ class SubscriptionAPIView(APIView):
         course_id = self.request.data.get("course")
         course_item = get_object_or_404(Course, pk=course_id)
 
-        subscription, created = Subscription.objects.get_or_create(owner=user, course=course_item)
+        subscription, created = Subscription.objects.get_or_create(
+            owner=user, course=course_item
+        )
         if not created:
             subscription.delete()
-            message = 'Подписка удалена'
+            message = "Подписка удалена"
         else:
-            message = 'Подписка добавлена'
+            message = "Подписка добавлена"
 
         return Response({"message": message})
