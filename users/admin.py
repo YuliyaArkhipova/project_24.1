@@ -11,7 +11,6 @@ class UserAdmin(admin.ModelAdmin):
         "phone",
         "city",
         "avatar",
-
     )
 
 

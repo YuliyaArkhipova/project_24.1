@@ -5,6 +5,11 @@ from rest_framework.permissions import AllowAny
 
 from users.models import Payments, User
 from users.serializer import PaymentsSerializer, UserSerializer
+from users.services import (
+    create_stripe_product,
+    create_stripe_price,
+    create_stripe_session,
+)
 
 
 class UserCreateAPIView(CreateAPIView):
@@ -29,3 +34,17 @@ class PaymentsListAPIView(ListAPIView):
         "payment_method",
     )
     ordering_fields = ("payment_date",)
+
+
+class PaymentCreateAPIView(CreateAPIView):
+    serializer_class = PaymentsSerializer
+    queryset = Payments.objects.all()
+
+    def perform_create(self, serializer):
+        payment = serializer.save(user=self.request.user)
+        product_id = create_stripe_product(payment)
+        price_id = create_stripe_price(product_id, payment.amount_payment)
+        session_id, payment_link = create_stripe_session(price_id)
+        payment.session_id = session_id
+        payment.link = payment_link
+        payment.save()
