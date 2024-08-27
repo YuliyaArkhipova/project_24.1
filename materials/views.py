@@ -10,7 +10,6 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from rest_framework import status
 from rest_framework.viewsets import ModelViewSet
 
 from materials.models import Course, Lesson, Subscription
@@ -22,6 +21,7 @@ from materials.serializer import (
     SubscriptionSerializer,
 )
 from users.permissions import IsModer, IsOwner
+from materials.tasks import send_updating_materials_course
 
 
 class CourseViewSet(ModelViewSet):
@@ -47,6 +47,11 @@ class CourseViewSet(ModelViewSet):
         elif self.action == ["destroy"]:
             self.permission_classes = (~IsModer | IsOwner,)
         return super().get_permissions()
+
+    def perform_update(self, serializer):
+        course = serializer.save()
+        send_updating_materials_course.delay(course.id)
+        course.save()
 
 
 class LessonCreateApiView(CreateAPIView):
