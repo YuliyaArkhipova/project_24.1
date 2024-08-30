@@ -2,7 +2,7 @@
 
 ### Инструкция по запуску
 1. Клонируйте данный репозиторий на свой локальный компьютер   
-`git clone https://github.com/YuliyaArkhipova/project_24.1
+`git clone https://github.com/YuliyaArkhipova/project_24.1`
 
 2. Выполните команду   
- 'docker-compose up -d --build'
+ `docker-compose up -d --build`
